@@ -1,33 +1,231 @@
 {% extends 'base.html' %}
 {% block title %}Kevin Koh Resume{% endblock %}
 
+{% block styles %}
+<link type="text/css" rel="stylesheet" href="/static/css/resume.css" />
+{% endblock %}
+
 {% block scripts %}
 {% endblock %}
 
 {% block content %}
+<div class="container resume-container" style="border: 1px solid #000000;">
+  <div class="row name-header">
+    <div class="col" style="text-align: center;">
+      <h1>Kevin Koh</h1>
+    </div>
+  </div>
 
-<div class="row">
-  <div class="col" style="text-align: center;">
-    <h1>Kevin Koh</h1>
+  <div class="row">
+    <div class="col" style="text-align: center;">
+      Software Engineer
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col" style="text-align: center;">
-    Software Engineer
-  </div>
-</div>
-<div class="row">
-  <div class="col-3">
-    1242 1/2 W Pine St
-  </div>
-  <div class="col-3">
-    Santa Ana, CA, 92703
-  </div>
-  <div class="col-3">
-    (925) 330-0556
-  </div>
-  <div class="col-3">
-    kevin.koh.dev@gmail.com
+
+  <div class="row">
+
+    <div class="col-sm-3">
+      <div class="row">
+        <div class="col">
+          Contact
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div>
+            <img src="/static/img/contact-icons/gmail.png">
+            <span class="contact-info">kevin.koh.dev@gmail.com</span>
+          </div>
+          <div>
+            <img src="/static/img/contact-icons/location.png">
+            <span class="contact-info">Los Angeles, CA, USA</span>
+          </div>
+          <div>
+            <img src="/static/img/contact-icons/website.png">
+            <span class="contact-info">www.kevinkoh.dev</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          Education
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>UC Berkeley</p>
+          <p>B.A. Computer Science</p>
+          <p>Berkeley, California | C/O 2015</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          Technical Strengths
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>Full Stack Web Application Development</li>
+            <li>Scalable Backend Engineering</li>
+            <li>System Design / Architecture</li>
+            <li>MicroService Oriented Design</li>
+            <li>Serverless Development</li>
+            <li>CI/CD Pipelines</li>
+            <li>Agile Development / Scrum Master</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          Language / Technologies
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>Languages: Python, JavaScript, TypeScript, Java, Ruby</p>
+          <p>Frameworks: Django, Flask, Ruby on Rails</p>
+          <p>AWS: CDK, CloudFormation, Lambda, SQS, Kinesis, DDB, ElasticSearch, S3, Athena, BeanStalk, EC2, RDS, CodeDeploy/Pipelines</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      <div class="row">
+        <div class="col">
+          Work Experience
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          Amazon Prime Video
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          Software&nbsp;Engineer&nbsp;L5 | Santa&nbsp;Monica,&nbsp;CA | Sept&nbsp;2018&nbsp;-&nbsp;January&nbsp;2020
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>
+            Built out backend systems for the Prime Video Direct product,
+            helping Studios and Content Creators upload their assets to the 
+            Prime Video platform.
+          </p>
+          <p>
+            Developed customer facing web UI, allowing users to track asset status.
+            Additionally built the supporting APIs and supporting data storage/search components.
+          </p>
+          <p>
+            Developed email engine component of Prime Video Direct's notification service.
+            Through Kinesis Shards, system was able to auto-throttle at variable TPS targets.
+          </p>
+            <div>
+            <p>Tech Stack worked with:</p>
+            <ul>
+              <li>
+                Java / Amazon Specific Web Framework
+              </li>
+              <li>
+                Amazon Specific Frontend Framework (similar to jQuery)
+              </li>
+              <li>
+                Compute: AWS Lambda / Serverless Application Model
+              </li>
+              <li>
+                Data: DynamoDB / ElasticSearch / S3 (Athena)
+              </li>
+              <li>
+                Messaging: SQS / SNS / Kinesis
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          InfoScout
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          Software&nbsp;Engineer | San&nbsp;Francisco,&nbsp;CA | Nov&nbsp;2016&nbsp;-&nbsp;Aug&nbsp;2018
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>
+            InfoScout (now acquired/merged into Numerator) was the premier omni-channel consumer analytics tool,
+            dealing with millions of data points every day.
+          </p>
+          <p>
+            Scaled up data attribution capabilities, through building out automated web scrapers and Data Analyst tools.
+            Improved Data Analyst productivity markedly through building ElasticSearch integration; 15x search speed improvement.
+          </p>
+          <p>
+            Became owner of Surveys platform, providing a significant revenue stream to the company.
+            Built/designed mobile-facing APIs, mobile/webpage UI, and backend management system.
+          </p>
+          <div>
+            <p>Tech Stack worked with:</p>
+            <ul>
+              <li>
+                Python / Django
+              </li>
+              <li>
+                AngularJS / jQuery
+              </li>
+              <li>
+                MySQL / Django ORM
+              </li>
+              <li>
+                ElasticSearch / Redis
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          Electronic Arts (Data Division)
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          Software&nbsp;Engineer | Redwood&nbsp;City,&nbsp;CA | Feb&nbsp;2015&nbsp;-&nbsp;Oct&nbsp;2016
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>
+            Developed EA's Game Analytics product, building reports and dashboards used by the rest of the company.
+          </p>
+          <p>
+            Coordinated with customers within EA for data reporting needs, running review sessions and feedback interations.
+          </p>
+          <p>
+            Built usage/performance tracking system for Game Analytics product, allowing insights on performance/impact. 
+            Developed reusable front-end integration tooling, backend pipeline, and reporting page.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          Projects
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          Consulting
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
 

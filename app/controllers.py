@@ -15,6 +15,14 @@ def index():
     return render_template('index.html', title="Home Page")
 
 
+@app.route('/resume/')
+def resume():
+    """
+    Resume page
+    """
+    return render_template('resume.html', title="Resume Page")
+
+
 @app.route('/session-start/', methods=['GET', 'POST'])
 def create_session_page():
     """

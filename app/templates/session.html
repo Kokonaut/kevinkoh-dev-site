@@ -1,4 +1,13 @@
 {% extends 'base.html' %}
+
+{% block styles %}
+<link type="text/css" rel="stylesheet" href="/static/css/channel.css" />
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="/static/js/session.js"></script>
+{% endblock %}
+
 {% block content %}
 <div class="container chat-content">
   <div class="row">
@@ -14,8 +23,4 @@
     </div>
   </div>
 </div>
-{% endblock %}
-
-{% block scripts %}
-<script type="text/javascript" src="/static/js/session.js"></script>
 {% endblock %}
