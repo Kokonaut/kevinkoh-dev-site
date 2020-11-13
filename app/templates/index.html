@@ -1,0 +1,255 @@
+{% extends 'base.html' %}
+{% block title %}Kevin Koh Sample Site{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="/static/js/parallax.min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col hero-section justify-content-center align-items-middle">
+    <div class="hero-section" style="background: none;">
+      <div class="parallax-window" data-parallax="scroll" data-image-src="/static/img/splash7.jpg" style="height: 100%;"
+        data-z-index="-1">
+      </div>
+      <div class="text-overlay">
+        <h1>I Build Stuff.</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mask-bg">
+  <div class="row hero-under-banner">
+    <div class="col">
+      <div class="container" style="max-width: 800px;">
+        <div class="row align-items-center" style="min-height: 40px;">
+          <div class="col-sm-4 text-pad">
+            Kevin Koh
+          </div>
+          <div class="col-sm-4 text-pad">
+            kevin.koh.dev@gmail.com
+          </div>
+          <div class="col-sm-4 text-pad">
+            Los Angeles, CA
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container page-content-container" style="margin-top: 40px;">
+    <div class="row">
+      <div class="col blurb-section">
+        <p>This is a demo site for the web app course I teach.</p>
+        <p>On this page, I showcase some of the work I've done in the past.</p>
+        <p>Also, check out a demo of the final project from my web app course in the Chatroom feature!</p>
+        <p>Feel free to contact me for project inquiries or interest in the class.</p>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 30px;">
+      <div class="col section-header">
+        Projects
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="container section-content">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front interest-img-holder">
+                    <img src="/static/img/prime-video.jpg" style="margin: auto;">
+                  </div>
+                  <div class="flip-card-back">
+                    <div>
+                      <h3>Prime Video Direct</h3>
+                      <p>As an employee, I built the data processing backend for the Prime Video Direct product.</p>
+                      <a target="_blank" href="https://videodirect.amazon.com/">Find the site here</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front interest-img-holder">
+                    <img src="/static/img/miadonna2.png">
+                  </div>
+                  <div class="flip-card-back">
+                    <div>
+                      <h3>MiaDonna Diamonds</h3>
+                      <p>I was hired to build out MiaDonna's new Shopify home page.</p>
+                      <a target="_blank" href="https://www.miadonna.com/">Check it out here</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front interest-img-holder">
+                    <img src="/static/img/rael.png">
+                  </div>
+                  <div class="flip-card-back">
+                    <div>
+                      <h3>Rael</h3>
+                      <p>Rael hired me to do several overhauls across their Shopify website.</p>
+                      <a target="_blank" href="https://www.getrael.com/">Check it out</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 100px;">
+      <div class="col section-header">
+        Work Experience
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+
+        <div class="container section-content">
+          <div class="row">
+            <div class="col section-content-header">
+              Independent Software Consultant
+            </div>
+          </div>
+          <div class="row">
+            <div class="col time-span">
+              Jan 2020 - Current
+            </div>
+          </div>
+          <div class="row">
+            <div class="col section-content-inner">
+              <p>
+                Opened up a self-owned service for private software consultation. Professional services included:
+              </p>
+              <ul>
+                <li class="main-li">Website Performance Audits</li>
+                <li class="main-li">System Design Reviews</li>
+                <li class="main-li">AWS / Serverless Consultation</li>
+                <li class="main-li">Independent Web App Development</li>
+                <li class="main-li">Independent Shopify Development</li>
+                <li class="main-li">Instruction</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="container section-content">
+          <div class="row">
+            <div class="col section-content-header">
+              Amazon Prime Video
+            </div>
+          </div>
+          <div class="row">
+            <div class="col time-span">
+              Sept 2018 - Jan 2020
+            </div>
+          </div>
+          <div class="row">
+            <div class="col section-content-inner">
+              <p>Built out backend systems for the Prime Video Direct product,
+                 helping Studios and Content Creators upload their assets to the 
+                 Prime Video platform.</p>
+              <p>Using serverless and microservice oriented design, we were able to 
+                build highly scalable systems at low cost.
+              </p>
+              <p>
+                Per above, we leveraged these AWS tools to build out entire data processing pipelines and end-user products:
+              </p>
+              <ul>
+                <li class="main-li">AWS Lambda</li>
+                <li class="main-li">DynamoDB</li>
+                <li class="main-li">Kinesis</li>
+                <li class="main-li">ElasticSearch</li>
+                <li class="main-li">SQS / SNS</li>
+                <li class="main-li">S3</li>
+                <li class="main-li">Athena</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="container section-content">
+          <div class="row">
+            <div class="col section-content-header">
+              InfoScout
+            </div>
+          </div>
+          <div class="row">
+            <div class="col time-span">
+              Nov 2016 - Aug 2018
+            </div>
+          </div>
+          <div class="row">
+            <div class="col section-content-inner">
+              <p>
+                InfoScout (now acquired/merged into Numerator) was the premier omni-channel 
+                consumer analytics tool, dealing with millions of data points every day.</p>
+              </p>
+              <p>
+                I came in to help scale up their data attribution capabilities, 
+                through building out automated processes and Data Analyst tools.
+              </p>
+              <p>
+                Later on I transitioned to owner of the Surveys platform, a key product feature that 
+                generated significant revenue to the company.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+<div class="footer-container">
+  <div class="container page-content-container">
+    <div class="row">
+      <div class="col-sm-6 contact-me-text">
+        Contact Me
+      </div>
+      <div class="col-sm-6 contact-icons">
+        <div>
+          <img src="/static/img/contact-icons/gmail.png">
+          <span class="contact-info">kevin.koh.dev@gmail.com</span>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/kevinkokonaut/">
+            <img src="/static/img/contact-icons/linkedin.png">
+            <span class="contact-info">linkedin.com/in/kevinkokonaut/</span>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/kevinkokonaut/">
+            <img src="/static/img/contact-icons/insta.jpg">
+            <span class="contact-info">@kevinkokonaut</span>
+          </a>
+        </div>
+        <div>
+          <a href="https://github.com/Kokonaut">
+            <img src="/static/img/contact-icons/github.png">
+            <span class="contact-info">github.com/kokonaut</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
