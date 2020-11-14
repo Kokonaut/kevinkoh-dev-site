@@ -4,6 +4,115 @@
  */
 
 /* -------- Resume Style -------- */
+
 .resume-container {
+  font-size: 14px;
+  font-family: sans-serif;
+  color: #696969;
+
   max-width: 1000px;
+
+  margin-top: 50px;
+  margin-bottom: 200px;
+}
+
+.resume-container p {
+  margin-bottom: 5px;
+}
+
+.resume-container .left-col {
+  font-size: 16px;
+}
+
+.resume-container ul {
+  padding-left: 25px;
+}
+
+.name-header {
+  font-family: Montserrat, sans-serif;
+  letter-spacing: 5px;
+  color: #000000;
+
+  margin-top: 10px;
+}
+
+.sub-name-header {
+  font-family: Montserrat, sans-serif;
+  letter-spacing: 3px;
+}
+
+.resume-section-header {
+  font-family: Oswald, sans-serif;
+  font-size: 25px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #000000;
+
+  margin-top: 20px;
+}
+
+.resume-section-header hr {
+  border-top: 1px solid #808080;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.resume-contact img {
+  height: 20px;
+}
+
+.resume-contact div {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.resume-contact span {
+  padding-left: 5px;
+}
+
+.work-header {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.work-content {
+  margin-bottom: 20px;
+}
+
+.sub-header {
+  font-weight: bold;
+  color: #333333;
+}
+
+.work-under-header {
+  font-size: 14px;
+
+  margin-bottom: 10px;
+}
+
+.resume-container .tech-strengths li {
+  margin: 5px 0px;
+}
+
+.education-section p {
+  margin-bottom: 0;
+}
+
+.tech-list li {
+  font-size: 15px;
+}
+
+
+/* -------- Print Overrides -------- */
+@media print {
+  /* body {
+    padding: 25.4mm 13.2mm 36.7mm 19.0mm;
+  } */
+
+  .resume-container {
+    max-width: none;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
