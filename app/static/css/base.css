@@ -19,6 +19,10 @@
   padding-bottom: 2px;
 }
 
+body {
+  font-family: sans-serif;
+}
+
 /* -------- Footer Style -------- */
 
 .footer-container {
