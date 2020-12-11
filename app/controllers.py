@@ -4,6 +4,7 @@ from flask import abort, request, render_template, Response, redirect
 
 from .forms import ChannelForm
 from .models import ChatManager, MessageManager, SessionManager
+from .mailer import send_mail
 
 
 # ------------ Web Routes ------------ #
@@ -14,6 +15,10 @@ def index():
     """
     return render_template('index.html', title="Home Page")
 
+@app.route('/blog-inner/')
+def blog_inner():
+    return render_template('blog-inner.html', title="Blog")
+
 
 @app.route('/resume/')
 def resume():
@@ -22,6 +27,12 @@ def resume():
     """
     return render_template('resume.html', title="Resume Page")
 
+@app.route('/resume-print/')
+def resume_print():
+    """
+    Resume printable version
+    """
+    return render_template('resume-print.html', title="Resume Printable")
 
 @app.route('/session-start/', methods=['GET', 'POST'])
 def create_session_page():
@@ -60,6 +71,12 @@ def chat_page(chat_hash):
 
 
 # ------------ Ajax Routes ------------ #
+@app.route('/contact-form/', methods=['POST'])
+def contact():
+    body = request.json
+    send_mail(body)
+    return {}
+
 @app.route('/session/', methods=['POST'])
 def create_session():
     """

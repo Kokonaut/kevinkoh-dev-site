@@ -14,14 +14,6 @@
 	
 	<!-- Load Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700%7CMontserrat:400,700%7CEczar:400,500,600,700,800" rel="stylesheet">
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="/static/css/basic.css" />
-  <link rel="stylesheet" href="/static/css/layout.css" />
-  <link rel="stylesheet" href="/static/css/blogs.css" />
-  <link rel="stylesheet" href="/static/css/ionicons.css" />
-  <link rel="stylesheet" href="/static/css/magnific-popup.css" />
-  <link rel="stylesheet" href="/static/css/animate.css" />
 
   <!-- Styles -->
   {% block styles %}{% endblock %}
@@ -32,7 +24,7 @@
 	<![endif]-->
 	
 	<!-- Favicon -->
-  <link rel="shortcut icon" href="images/favicons/favicon.ico">
+  <link rel="shortcut icon" href="/static/images/favicons/k_favicon.ico">
 </head>
 
 <body>
@@ -40,36 +32,7 @@
   <!-- Page -->
 	<div class="page">
 
-    <!-- Preloader -->
-		<div class="preloader">
-			<div class="centrize full-width">
-				<div class="vertical-center">
-					<div class="spinner">
-						<div class="double-bounce1"></div>
-						<div class="double-bounce2"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-    <header class="header">
-			<div class="fw">
-				<div class="logo">
-					<a href="#">KK.</a>
-				</div>
-				<a href="#" class="menu-btn"><span></span></a>
-				<div class="top-menu">
-					<ul>
-						<li><a href="#about-section">About</a></li>
-						<li><a href="#services-section">What I Do</a></li>
-						<li><a href="#works-section">Works</a></li>
-						<li><a href="#blog-section">Blog</a></li>
-						<li><a href="#contact-section">Contact</a></li>
-					</ul>
-					<a href="#" class="close"></a>
-				</div>
-			</div>
-		</header>
+    {% block header %}{% endblock %}
 
     <!-- Begin page content -->
     <main id="content" role="main">
@@ -83,8 +46,13 @@
   <div id="footer">
     {% block footer %}{% endblock %}
   </div>
+
+  <!-- Main Scripts -->
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/jquery.validate.js"></script>
+  <script src="/static/js/main.js"></script>
   
-  <!-- /scripts -->
+  <!-- Scripts -->
   {% block scripts %}{% endblock %}
 
 </body>

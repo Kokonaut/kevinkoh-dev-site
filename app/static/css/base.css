@@ -3,6 +3,22 @@
  * Main stylesheet file.
  */
 
+/* -------- Overrides Style -------- */
+.header {
+  /* position: absolute !important; */
+  line-height: 20px !important;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.header .fw a {
+  color: #000000 !important;
+}
+
+.header ul {
+  margin-bottom: 0;
+}
+
 /* -------- General Style -------- */
 #content {
   /* background: #FEFEFE; */
@@ -55,4 +71,5 @@ body {
 .contact-info {
   margin-left: 15px;
   color: #000000 !important;
+  line-height: 20px;
 }

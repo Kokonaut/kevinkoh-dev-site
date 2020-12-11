@@ -2,12 +2,18 @@
 {% block title %}Kevin Koh{% endblock %}
 
 {% block styles %}
+<!-- CSS -->
+<link rel="stylesheet" href="/static/css/basic.css" />
+<link rel="stylesheet" href="/static/css/layout.css" />
+<link rel="stylesheet" href="/static/css/blogs.css" />
+<link rel="stylesheet" href="/static/css/ionicons.css" />
+<link rel="stylesheet" href="/static/css/magnific-popup.css" />
+<link rel="stylesheet" href="/static/css/animate.css" />
+<link rel="stylesheet" href="/static/css/footer.css" />
 {% endblock %}
 
 {% block scripts %}
 <!-- jQuery Scripts -->
-<script src="/static/js/jquery.min.js"></script>
-<script src="/static/js/jquery.validate.js"></script>
 <script src="/static/js/masonry.pkgd.js"></script>
 <script src="/static/js/imagesloaded.pkgd.js"></script>
 <script src="/static/js/masonry-filter.js"></script>
@@ -16,9 +22,42 @@
 <script src="/static/js/jquery.mb.YTPlayer.js"></script>
 <script src="/static/js/particles.js"></script>
 <script src="/static/js/typed.js"></script>
+{% endblock %}
 
-<!-- Main Scripts -->
-<script src="/static/js/main.js"></script>
+{% block header %}
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="centrize full-width">
+    <div class="vertical-center">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="fw">
+    <div class="logo">
+      <a href="#">KK.</a>
+    </div>
+    <a href="#" class="menu-btn"><span></span></a>
+    <div class="top-menu">
+      <ul>
+        <li><a href="#about-section">About</a></li>
+        <li><a href="#services-section">What I Do</a></li>
+        <li style="display: none;"><a href="#works-section">Works</a></li>
+        <li style="display: none;"><a href="#blog-section">Blog</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+        <li><a href="/resume/">Resume</a></li>
+      </ul>
+      <a href="#" class="close"></a>
+    </div>
+  </div>
+</header>
+
 {% endblock %}
 
 {% block content %}
@@ -36,10 +75,11 @@
             <p>Kevin Koh</p>
             <p>I Build Stuff</p>
             <p>Web Apps</p>
-            <p>Backend Systems</p>
-            <p>Serverless</p>
-            <p>Products</p>
-            <p>Courses</p>
+            <p>Backends</p>
+            <p>Micro Services</p>
+            <p>Serverless Systems</p>
+            <p>Tech Products</p>
+            <p>Coding Courses</p>
           </div>
           <span class="typed-title"></span>
         </div>
@@ -52,15 +92,22 @@
   <div class="section about align-left" id="about-section">
     <div class="fw">
       <div class="text-box">
-        <h1 class="animated">I'm Kevin Koh,</h1>
-        <h2>Software Engineer / Product Builder / Instructor</h2>
-        <h1>from Los Angeles, California.</h1>
+        <h2 class="animated">
+          I'm Kevin Koh,<br/>
+          Software Engineer / Product Builder / Instructor<br/>
+          from Los Angeles, California.
+        </h2>
         <p class="animated">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <br />laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi <br />architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas <br />sit aspernatur aut odit aut fugit. Sed ut perspiciatis unde omnis iste natus error.
+          I've built Amazon scale backends.<br/>
+          Developed storefronts for small business eCommerce clients.<br/>
+          Even taught development to high schoolers.<br/>
+          My experience ranges from napkin-math prototypes to production-ready builds.<br/>
+          Consider me a plug-and-play option across the stack. The TE in the formation. The gadget player.<br/>
+          If you've got an idea, I know how to make it work.
         </p>
       </div>
       <div class="bts">
-        <a href="#" class="btn extra animated">Download Resume</a>
+        <a href="/resume/" class="btn extra animated">View My Resume</a>
       </div>
     </div>
   </div>
@@ -75,43 +122,58 @@
         <div class="col col-m-12 col-t-6 col-d-4">
           <div class="service-item animated">
             <div class="circle"><i class="icon ion ion-ios-browsers-outline"></i></div>
-            <div class="name">UI/UX Design</div>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            <div class="name">Full Stack Web Apps</div>
+            <p>
+              I've built countless web services with Django, Rails, Flask, or Node.
+              I believe in prototyping ideas fast and opening up the product flywheel early.
+            </p>
           </div>
         </div>
         <div class="col col-m-12 col-t-6 col-d-4">
           <div class="service-item animated">
             <div class="circle"><i class="icon ion ion-ios-lightbulb-outline"></i></div>
-            <div class="name">Brand Identity</div>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            <div class="name">Scalable Backends</div>
+            <p>
+              I have extensive experience with large, autoscaling backends,
+              specializing with AWS-backed MicroService oriented systems.
+            </p>
           </div>
         </div>
         <div class="col col-m-12 col-t-6 col-d-4">
           <div class="service-item animated">
             <div class="circle"><i class="icon ion ion-ios-color-wand-outline"></i></div>
-            <div class="name">Web Design</div>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            <div class="name">Responsive UIs</div>
+            <p>
+              My proven track record for building responsive front-ends have reliably ensured a smooth experience for many users.
+            </p>
           </div>
         </div>
         <div class="col col-m-12 col-t-6 col-d-4">
           <div class="service-item animated">
             <div class="circle"><i class="icon ion ion-social-android-outline"></i></div>
-            <div class="name">Mobile Apps</div>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            <div class="name">Shopify Development</div>
+            <p>
+              Clients have repeatedly gone to me for their Shopify development needs, including 
+              custom features, app integrations, and UI overhauls.
+            </p>
           </div>
         </div>
         <div class="col col-m-12 col-t-6 col-d-4">
           <div class="service-item animated">
             <div class="circle"><i class="icon ion ion-ios-analytics-outline"></i></div>
-            <div class="name">Analytics</div>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            <div class="name">Tech Team Building</div>
+            <p>
+              For large and small companies, I have assessed dev team needs and interviewed/hired effective candidates.
+            </p>
           </div>
         </div>
         <div class="col col-m-12 col-t-6 col-d-4">
           <div class="service-item animated">
             <div class="circle"><i class="icon ion ion-ios-camera-outline"></i></div>
-            <div class="name">Photography</div>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            <div class="name">Course Instruction</div>
+            <p>
+              Partnering with after-school programs, I build and teach programming courses for students at a variety of levels.
+            </p>
           </div>
         </div>
       </div>
@@ -119,7 +181,7 @@
   </div>
 
   <!-- Portfolio -->
-  <div class="section works align-left" id="works-section">
+  <div class="section works align-left" id="works-section" style="display: none;">
     <div class="fw">
       <div class="titles animated">
         <div class="title">Recent Works</div>
@@ -318,7 +380,7 @@
   </div>
 
   <!-- Blog -->
-  <div class="section works align-left gray" id="blog-section">
+  <div class="section works align-left gray" id="blog-section" style="display: none;">
     <div class="fw">
       <div class="titles animated">
         <div class="title">Latest Blogs</div>
@@ -363,7 +425,7 @@
   <div class="section contacts align-left" id="contact-section">
     <div class="fw">
       <div class="titles animated">
-        <div class="title">Contact Me</div>
+        <div class="title">Let's Talk</div>
       </div>
       <div class="contact-form">
         <form id="cform" method="post">
@@ -375,7 +437,7 @@
             </div>
             <div class="col col-m-12 col-t-6 col-d-6 animated">
               <div class="value">
-                <input type="tel" name="tel" placeholder="Phone *" />
+                <input type="tel" name="tel" placeholder="Phone" />
               </div>
             </div>
             <div class="col col-m-12 col-t-6 col-d-6 animated">
@@ -399,7 +461,7 @@
           </div>
         </form>
         <div class="alert-success">
-          <p>Thanks, your message is sent successfully. We will contact you shortly!</p>
+          <p>Thank you for reaching out. I will contact you shortly!</p>
         </div>
       </div>
     </div>
@@ -411,14 +473,39 @@
 
 {% block footer %}
 <!-- Footer -->
-<footer class="align-center">
-  <div class="copy animated">© 2016 Hendrie. all rights reserved.</div>
-  <div class="st-soc animated">
-    <a target="blank" href="https://www.facebook.com"><i class="icon ion ion-social-facebook"></i></a>
-    <a target="blank" href="https://github.com"><i class="icon ion ion-social-github"></i></a>
-    <a target="blank" href="https://twitter.com"><i class="icon ion ion-social-twitter"></i></a>
-    <a target="blank" href="https://www.youtube.com"><i class="icon ion ion-social-youtube"></i></a>
-    <a target="blank" href="https://plus.google.com"><i class="icon ion ion-social-googleplus"></i></a>
+<footer class="footer-container">
+  <div class="footer-inner">
+    <div class="row">
+      <div class="col col-m-12 col-t-6 col-d-6 contact-me-text">
+        Contact Me
+      </div>
+      <div class="col col-m-12 col-t-6 col-d-6 contact-icons">
+        <div>
+          <a>
+            <img src="/static/img/contact-icons/gmail.png">
+            <span class="contact-info">kevin.koh.dev@gmail.com</span>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/kevinkokonaut/">
+            <img src="/static/img/contact-icons/linkedin.png">
+            <span class="contact-info">linkedin.com/in/kevinkokonaut/</span>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/kevinkokonaut/">
+            <img src="/static/img/contact-icons/insta.jpg">
+            <span class="contact-info">@kevinkokonaut</span>
+          </a>
+        </div>
+        <div>
+          <a href="https://github.com/Kokonaut">
+            <img src="/static/img/contact-icons/github.png">
+            <span class="contact-info">github.com/kokonaut</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 {% endblock %}

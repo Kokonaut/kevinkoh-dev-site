@@ -40,11 +40,15 @@ $(function () {
 		$(window).on('scroll', function(){
 			var scrollPos = $(window).scrollTop();
 			$('.top-menu ul li a').each(function () {
-				var currLink = $(this);
-				var refElement = $(currLink.attr("href"));
-				if (refElement.offset().top <= scrollPos) {
-					$('.top-menu ul li').removeClass("active");
-					currLink.closest('li').addClass("active");
+				try {
+					var currLink = $(this);
+					var refElement = $(currLink.attr("href"));
+					if (refElement.offset().top <= scrollPos) {
+						$('.top-menu ul li').removeClass("active");
+						currLink.closest('li').addClass("active");
+					}
+				} catch (err) {
+					// Catch the hardlinks and let pass
 				}
 			});
 		});
@@ -182,7 +186,6 @@ $(function () {
 				required: true
 			},
 			tel: {
-				required: true
 			},
 			message: {
 				required: true
@@ -196,12 +199,27 @@ $(function () {
 			}
 		},
 		success: "valid",
-		submitHandler: function() {
+		submitHandler: function () {
+			let _name = $("#cform").find('input[name="name"]').val();
+			let _tel = $("#cform").find('input[name="tel"]').val();
+			let _email = $("#cform").find('input[name="email"]').val();
+			let _subject = $("#cform").find('input[name="subject"]').val();
+			let _message = $("#cform").find('textarea[name="message"]').val();
+
+			let jsonData = {
+				name: _name,
+				tel: _tel,
+				email: _email,
+				subject: _subject,
+				message: _message
+			}
+
 			$.ajax({
-				url: 'mailer/feedback.php',
+				url: '/contact-form/',
 				type: 'post',
 				dataType: 'json',
-				data: 'name='+ $("#cform").find('input[name="name"]').val() + '&tel='+ $("#cform").find('input[name="tel"]').val() + '&email='+ $("#cform").find('input[name="email"]').val() + '&subject='+ $("#cform").find('input[name="subject"]').val() + '&message=' + $("#cform").find('textarea[name="message"]').val(),
+				contentType: "application/json",
+				data: JSON.stringify(jsonData),
 				beforeSend: function() {
 				
 				},
