@@ -12,7 +12,6 @@
             ".git",
             "venv",
             "config.env",
-            ".env",
             "app/static",
             "upload_assets.py",
             "app.db"
