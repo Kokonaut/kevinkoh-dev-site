@@ -8,22 +8,22 @@
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link type="text/css" rel="stylesheet" href="/static/css/base.css" />
-<link type="text/css" rel="stylesheet" href="/static/css/resume.css" />
-<link rel="stylesheet" href="/static/css/layout.css" />
-<link rel="stylesheet" href="/static/css/ionicons.css" />
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}" />
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/resume.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ionicons.css') }}" />
 {% endblock %}
 
 {% block scripts %}
 <!-- jQuery Scripts -->
-<script src="/static/js/masonry.pkgd.js"></script>
-<script src="/static/js/imagesloaded.pkgd.js"></script>
-<script src="/static/js/masonry-filter.js"></script>
-<script src="/static/js/magnific-popup.js"></script>
-<script src="/static/js/scrollreveal.js"></script>
-<script src="/static/js/jquery.mb.YTPlayer.js"></script>
-<script src="/static/js/particles.js"></script>
-<script src="/static/js/typed.js"></script>
+<script src="{{ url_for('static', filename='js/masonry.pkgd.js') }}"></script>
+<script src="{{ url_for('static', filename='js/imagesloaded.pkgd.js') }}"></script>
+<script src="{{ url_for('static', filename='js/masonry-filter.js') }}"></script>
+<script src="{{ url_for('static', filename='js/magnific-popup.js') }}"></script>
+<script src="{{ url_for('static', filename='js/scrollreveal.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.mb.YTPlayer.js') }}"></script>
+<script src="{{ url_for('static', filename='js/particles.js') }}"></script>
+<script src="{{ url_for('static', filename='js/typed.js') }}"></script>
 {% endblock %}
 
 {% block header %}
@@ -48,7 +48,7 @@
     <div class="top-menu">
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="#download">Download <i class="icon ion ion-ios-download-outline"></i></a></li>
+        <li><a href="{{ url_for('static', filename='files/kevin_koh_resume.pdf') }}">Download <i class="icon ion ion-ios-download-outline"></i></a></li>
       </ul>
       <a href="#" class="close"></a>
     </div>
@@ -82,15 +82,15 @@
       <div class="row">
         <div class="col resume-contact">
           <div>
-            <img src="/static/img/contact-icons/gmail.png">
+            <img src="{{ url_for('static', filename='img/contact-icons/gmail.png') }}">
             <span>kevin.koh.dev@gmail.com</span>
           </div>
           <div>
-            <img src="/static/img/contact-icons/location.png">
+            <img src="{{ url_for('static', filename='img/contact-icons/location.png') }}">
             <span>Los Angeles, CA, USA</span>
           </div>
           <div>
-            <img src="/static/img/contact-icons/website.png">
+            <img src="{{ url_for('static', filename='img/contact-icons/website.png') }}">
             <span>www.kevinkoh.dev</span>
           </div>
         </div>

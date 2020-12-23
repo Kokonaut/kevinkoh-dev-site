@@ -1,6 +1,6 @@
 import sys
 from app import app
-from flask import abort, request, render_template, Response, redirect
+from flask import abort, request, render_template, Response, redirect, send_file, url_for
 
 from .forms import ChannelForm
 from .models import ChatManager, MessageManager, SessionManager
@@ -34,13 +34,19 @@ def resume_print():
     """
     return render_template('resume-print.html', title="Resume Printable")
 
+@app.route('/resume/download/')
+def resume_download():
+    """
+    Download Resume PDF
+    """
+    return send_file(url_for('static', filename='files/kevin_koh_resume.pdf'), as_attachment=True)
+
 @app.route('/session-start/', methods=['GET', 'POST'])
 def create_session_page():
     """
     Create session page
     """
     return render_template('session.html', title='Session')
-
 
 @app.route('/channels/create/', methods=['GET', 'POST'])
 def create_chat_page():

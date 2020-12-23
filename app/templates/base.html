@@ -24,7 +24,7 @@
 	<![endif]-->
 	
 	<!-- Favicon -->
-  <link rel="shortcut icon" href="/static/images/favicons/k_favicon.ico">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicons/k_favicon.ico') }}">
 </head>
 
 <body>
@@ -48,9 +48,9 @@
   </div>
 
   <!-- Main Scripts -->
-  <script src="/static/js/jquery.min.js"></script>
-  <script src="/static/js/jquery.validate.js"></script>
-  <script src="/static/js/main.js"></script>
+  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.validate.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   
   <!-- Scripts -->
   {% block scripts %}{% endblock %}

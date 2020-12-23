@@ -3,25 +3,25 @@
 
 {% block styles %}
 <!-- CSS -->
-<link rel="stylesheet" href="/static/css/basic.css" />
-<link rel="stylesheet" href="/static/css/layout.css" />
-<link rel="stylesheet" href="/static/css/blogs.css" />
-<link rel="stylesheet" href="/static/css/ionicons.css" />
-<link rel="stylesheet" href="/static/css/magnific-popup.css" />
-<link rel="stylesheet" href="/static/css/animate.css" />
-<link rel="stylesheet" href="/static/css/footer.css" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/basic.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/blogs.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ionicons.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}" />
 {% endblock %}
 
 {% block scripts %}
 <!-- jQuery Scripts -->
-<script src="/static/js/masonry.pkgd.js"></script>
-<script src="/static/js/imagesloaded.pkgd.js"></script>
-<script src="/static/js/masonry-filter.js"></script>
-<script src="/static/js/magnific-popup.js"></script>
-<script src="/static/js/scrollreveal.js"></script>
-<script src="/static/js/jquery.mb.YTPlayer.js"></script>
-<script src="/static/js/particles.js"></script>
-<script src="/static/js/typed.js"></script>
+<script src="{{ url_for('static', filename='js/masonry.pkgd.js') }}"></script>
+<script src="{{ url_for('static', filename='js/imagesloaded.pkgd.js') }}"></script>
+<script src="{{ url_for('static', filename='js/masonry-filter.js') }}"></script>
+<script src="{{ url_for('static', filename='js/magnific-popup.js') }}"></script>
+<script src="{{ url_for('static', filename='js/scrollreveal.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.mb.YTPlayer.js') }}"></script>
+<script src="{{ url_for('static', filename='js/particles.js') }}"></script>
+<script src="{{ url_for('static', filename='js/typed.js') }}"></script>
 {% endblock %}
 
 {% block header %}
@@ -67,7 +67,7 @@
 
   <!-- Section Started -->
   <div class="section started">
-    <div class="slide" style="background-image: url(/static/images/splash-home.jpg);"></div>
+    <div class="slide" style="background-image: url({{ url_for('static', filename='images/splash-home.jpg') }});"></div>
     <div class="centrize full-width">
       <div class="vertical-center">
         <div class="st-title align-center">
@@ -98,12 +98,11 @@
           from Los Angeles, California.
         </h2>
         <p class="animated">
-          I've built Amazon scale backends.<br/>
-          Developed storefronts for small business eCommerce clients.<br/>
-          Even taught development to high schoolers.<br/>
+          I build large-scale, enterprise backends.<br/>
+          Develop storefronts for small business eCommerce clients.<br/>
+          And even teach development to high schoolers.<br/>
           My experience ranges from napkin-math prototypes to production-ready builds.<br/>
-          Consider me a plug-and-play option across the stack. The TE in the formation. The gadget player.<br/>
-          If you've got an idea, I know how to make it work.
+          Give me an idea, and I'll make it work.
         </p>
       </div>
       <div class="bts">
@@ -131,7 +130,7 @@
         </div>
         <div class="col col-m-12 col-t-6 col-d-4">
           <div class="service-item animated">
-            <div class="circle"><i class="icon ion ion-ios-lightbulb-outline"></i></div>
+            <div class="circle"><i class="icon ion ion-ios-cloud-outline"></i></div>
             <div class="name">Scalable Backends</div>
             <p>
               I have extensive experience with large, autoscaling backends,
@@ -141,7 +140,7 @@
         </div>
         <div class="col col-m-12 col-t-6 col-d-4">
           <div class="service-item animated">
-            <div class="circle"><i class="icon ion ion-ios-color-wand-outline"></i></div>
+            <div class="circle"><i class="icon ion ion-ios-monitor-outline"></i></div>
             <div class="name">Responsive UIs</div>
             <p>
               My proven track record for building responsive front-ends have reliably ensured a smooth experience for many users.
@@ -150,7 +149,7 @@
         </div>
         <div class="col col-m-12 col-t-6 col-d-4">
           <div class="service-item animated">
-            <div class="circle"><i class="icon ion ion-social-android-outline"></i></div>
+            <div class="circle"><i class="icon ion ion-ios-cart-outline"></i></div>
             <div class="name">Shopify Development</div>
             <p>
               Clients have repeatedly gone to me for their Shopify development needs, including 
@@ -160,7 +159,7 @@
         </div>
         <div class="col col-m-12 col-t-6 col-d-4">
           <div class="service-item animated">
-            <div class="circle"><i class="icon ion ion-ios-analytics-outline"></i></div>
+            <div class="circle"><i class="icon ion ion-ios-gear-outline"></i></div>
             <div class="name">Tech Team Building</div>
             <p>
               For large and small companies, I have assessed dev team needs and interviewed/hired effective candidates.
@@ -169,7 +168,7 @@
         </div>
         <div class="col col-m-12 col-t-6 col-d-4">
           <div class="service-item animated">
-            <div class="circle"><i class="icon ion ion-ios-camera-outline"></i></div>
+            <div class="circle"><i class="icon ion ion-ios-compose-outline"></i></div>
             <div class="name">Course Instruction</div>
             <p>
               Partnering with after-school programs, I build and teach programming courses for students at a variety of levels.
@@ -208,7 +207,7 @@
           <div class="item animated">
             <div class="desc">
               <div class="image">
-                <a href="#popup-1" class="has-popup"><img src="/static/images/works/work1.jpg" alt="" /></a>
+                <a href="#popup-1" class="has-popup"><img src="{{ url_for('static', filename='images/works/work1.jpg') }}" alt="" /></a>
               </div>
               <div class="category">Mockups</div>
               <div class="name">
@@ -219,7 +218,7 @@
           <div id="popup-1" class="popup-box mfp-fade mfp-hide">
             <div class="content">
               <div class="image">
-                <img src="/static/images/works/work1.jpg" alt="">
+                <img src="{{ url_for('static', filename='images/works/work1.jpg') }}" alt="">
               </div>
               <div class="desc">
                 <div class="category">Mockups</div>
@@ -236,7 +235,7 @@
           <div class="item animated">
             <div class="desc">
               <div class="image">
-                <a href="#popup-2" class="has-popup"><img src="/static/images/works/work2.jpg" alt="" /></a>
+                <a href="#popup-2" class="has-popup"><img src="{{ url_for('static', filename='images/works/work2.jpg') }}" alt="" /></a>
               </div>
               <div class="category">Branding</div>
               <div class="name">
@@ -247,7 +246,7 @@
           <div id="popup-2" class="popup-box mfp-fade mfp-hide">
             <div class="content">
               <div class="image">
-                <img src="/static/images/works/work2.jpg" alt="">
+                <img src="{{ url_for('static', filename='images/works/work2.jpg') }}" alt="">
               </div>
               <div class="desc">
                 <div class="category">Branding</div>
@@ -265,7 +264,7 @@
           <div class="item animated">
             <div class="desc">
               <div class="image">
-                <a href="#popup-3" class="has-popup"><img src="/static/images/works/work3.jpg" alt="" /></a>
+                <a href="#popup-3" class="has-popup"><img src="{{ url_for('static', filename='images/works/work3.jpg') }}" alt="" /></a>
               </div>
               <div class="category">Mockups</div>
               <div class="name">
@@ -276,7 +275,7 @@
           <div id="popup-3" class="popup-box mfp-fade mfp-hide">
             <div class="content">
               <div class="image">
-                <img src="/static/images/works/work3.jpg" alt="">
+                <img src="{{ url_for('static', filename='images/works/work3.jpg') }}" alt="">
               </div>
               <div class="desc">
                 <div class="category">Mockups</div>
@@ -293,7 +292,7 @@
           <div class="item animated">
             <div class="desc">
               <div class="image">
-                <a href="#popup-4" class="has-popup"><img src="/static/images/works/work4.jpg" alt="" /></a>
+                <a href="#popup-4" class="has-popup"><img src="{{ url_for('static', filename='images/works/work4.jpg') }}" alt="" /></a>
               </div>
               <div class="category">Branding</div>
               <div class="name">
@@ -304,7 +303,7 @@
           <div id="popup-4" class="popup-box mfp-fade mfp-hide">
             <div class="content">
               <div class="image">
-                <img src="/static/images/works/work4.jpg" alt="">
+                <img src="{{ url_for('static', filename='images/works/work4.jpg') }}" alt="">
               </div>
               <div class="desc">
                 <div class="category">Branding</div>
@@ -322,7 +321,7 @@
           <div class="item animated">
             <div class="desc">
               <div class="image">
-                <a href="#popup-5" class="has-popup"><img src="/static/images/works/work5.jpg" alt="" /></a>
+                <a href="#popup-5" class="has-popup"><img src="{{ url_for('static', filename='images/works/work5.jpg') }}" alt="" /></a>
               </div>
               <div class="category">Photography</div>
               <div class="name">
@@ -333,7 +332,7 @@
           <div id="popup-5" class="popup-box mfp-fade mfp-hide">
             <div class="content">
               <div class="image">
-                <img src="/static/images/works/work5.jpg" alt="">
+                <img src="{{ url_for('static', filename='images/works/work5.jpg') }}" alt="">
               </div>
               <div class="desc">
                 <div class="category">Photography</div>
@@ -350,7 +349,7 @@
           <div class="item animated">
             <div class="desc">
               <div class="image">
-                <a href="#popup-6" class="has-popup"><img src="/static/images/works/work6.jpg" alt="" /></a>
+                <a href="#popup-6" class="has-popup"><img src="{{ url_for('static', filename='images/works/work6.jpg') }}" alt="" /></a>
               </div>
               <div class="category">UI Kits</div>
               <div class="name">
@@ -361,7 +360,7 @@
           <div id="popup-6" class="popup-box mfp-fade mfp-hide">
             <div class="content">
               <div class="image">
-                <img src="/static/images/works/work6.jpg" alt="">
+                <img src="{{ url_for('static', filename='images/works/work6.jpg') }}" alt="">
               </div>
               <div class="desc">
                 <div class="category">UI Kits</div>
@@ -389,7 +388,7 @@
         <div class="col col-m-12 col-t-4 col-d-4">
           <div class="blog-item animated">
             <div class="image">
-              <a href="blog-inner.html"><img src="/static/images/blog/blog1.png" alt="" /></a>
+              <a href="blog-inner.html"><img src="{{ url_for('static', filename='images/blog/blog1.png') }}" alt="" /></a>
             </div>
             <a href="blog-inner.html" class="name">By spite about do of do allow blush</a>
             <p>Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat.</p>
@@ -399,7 +398,7 @@
         <div class="col col-m-12 col-t-4 col-d-4">
           <div class="blog-item animated">
             <div class="image">
-              <a href="blog-inner.html"><img src="/static/images/blog/blog2.png" alt="" /></a>
+              <a href="blog-inner.html"><img src="{{ url_for('static', filename='images/blog/blog2.png') }}" alt="" /></a>
             </div>
             <a href="blog-inner.html" class="name">Two Before Arrow Not Relied</a>
             <p>Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat.</p>
@@ -409,7 +408,7 @@
         <div class="col col-m-12 col-t-4 col-d-4">
           <div class="blog-item animated">
             <div class="image">
-              <a href="blog-inner.html"><img src="/static/images/blog/blog3.png" alt="" /></a>
+              <a href="blog-inner.html"><img src="{{ url_for('static', filename='images/blog/blog3.png') }}" alt="" /></a>
             </div>
             <a href="blog-inner.html" class="name">By spite about do of do allow blush</a>
             <p>Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat.</p>
@@ -482,25 +481,25 @@
       <div class="col col-m-12 col-t-6 col-d-6 contact-icons">
         <div>
           <a>
-            <img src="/static/img/contact-icons/gmail.png">
+            <img src="{{ url_for('static', filename='img/contact-icons/gmail.png') }}">
             <span class="contact-info">kevin.koh.dev@gmail.com</span>
           </a>
         </div>
         <div>
           <a href="https://www.linkedin.com/in/kevinkokonaut/">
-            <img src="/static/img/contact-icons/linkedin.png">
+            <img src="{{ url_for('static', filename='img/contact-icons/linkedin.png') }}">
             <span class="contact-info">linkedin.com/in/kevinkokonaut/</span>
           </a>
         </div>
         <div>
           <a href="https://www.instagram.com/kevinkokonaut/">
-            <img src="/static/img/contact-icons/insta.jpg">
+            <img src="{{ url_for('static', filename='img/contact-icons/insta.jpg') }}">
             <span class="contact-info">@kevinkokonaut</span>
           </a>
         </div>
         <div>
           <a href="https://github.com/Kokonaut">
-            <img src="/static/img/contact-icons/github.png">
+            <img src="{{ url_for('static', filename='img/contact-icons/github.png') }}">
             <span class="contact-info">github.com/kokonaut</span>
           </a>
         </div>
